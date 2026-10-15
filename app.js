@@ -37,7 +37,7 @@ function selectMuscle(id) {
   document.querySelector("#detailName").textContent = muscle.name;
   document.querySelector("#detailLocation").textContent = muscle.location;
   document.querySelector("#regionTag").textContent = muscle.region === "core" ? "CORE" : `${muscle.region.toUpperCase()} BODY`;
-  document.querySelector("#stretchList").replaceChildren(...muscle.stretches.map((stretch) => makeListItem(stretch)));
+  document.querySelector("#stretchList").replaceChildren(...muscle.stretches.map((stretch) => makeStretchListItem(stretch, muscle.name)));
   document.querySelector("#causeList").replaceChildren(...muscle.causes.map((cause) => makeListItem(cause)));
   renderList();
   setView(muscle.view);
@@ -50,6 +50,26 @@ function selectMuscle(id) {
 function makeListItem(text) {
   const item = document.createElement("li");
   item.textContent = text;
+  return item;
+}
+
+function makeStretchListItem(stretch, muscleName) {
+  const item = document.createElement("li");
+  const copy = document.createElement("span");
+  const link = document.createElement("a");
+  const searchURL = new URL("https://www.youtube.com/results");
+  const exercise = stretch.split(" · ")[0];
+
+  copy.className = "stretch-copy";
+  copy.textContent = stretch;
+  searchURL.searchParams.set("search_query", `${muscleName} ${exercise}`);
+  link.className = "stretch-link";
+  link.href = searchURL.toString();
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.setAttribute("aria-label", `Search YouTube for ${muscleName}: ${exercise}`);
+  link.textContent = "YouTube ↗";
+  item.append(copy, link);
   return item;
 }
 
