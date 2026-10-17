@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f3ed" />
-    <meta name="description" content="Explore an interactive front-and-back muscle atlas with 32 muscle groups, the Achilles tendon, practical stretches, and common sources of discomfort." />
+    <meta name="description" content="Explore an interactive front-and-back muscle atlas with 42 muscle groups, the Achilles tendon, practical stretches, and common sources of discomfort." />
     <title>Muscle Atlas | Movement reference</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
@@ -26,7 +26,7 @@
           <p class="eyebrow">ANATOMY, MADE INTERACTIVE</p>
           <h1 id="page-title">Know what’s <em>moving you.</em></h1>
         </div>
-        <p class="intro-copy">Explore 32 muscle groups and the Achilles tendon on a detailed front-and-back body map, with practical stretch instructions and common reasons a structure may feel sore or tight.</p>
+        <p class="intro-copy">Explore 42 muscle groups and the Achilles tendon on an enlarged front-and-back body map, or see which muscles are commonly involved in different activities.</p>
       </section>
 
       <div class="explorer-tabs" id="explorerTabs" role="tablist" aria-label="Explore by">
@@ -138,6 +138,21 @@
               <g class="muscle-zone" data-muscle="peroneals" role="button" tabindex="0" aria-label="Select fibularis peroneal muscles">
                 <path d="M185 431 194 435 190 508 184 532 180 506Z M295 431 286 435 290 508 296 532 300 506Z" />
               </g>
+              <g class="muscle-zone" data-muscle="iliopsoas" role="button" tabindex="0" aria-label="Select iliopsoas">
+                <path d="M217 269 233 274 229 302 218 313 211 296Z M263 269 247 274 251 302 262 313 269 296Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="rectus-femoris" role="button" tabindex="0" aria-label="Select rectus femoris">
+                <path d="M215 321 235 326 232 389 221 407 211 389Z M265 321 245 326 248 389 259 407 269 389Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="vastus-medialis" role="button" tabindex="0" aria-label="Select vastus medialis">
+                <path d="M210 374 222 382 218 407 208 417 202 401Z M270 374 258 382 262 407 272 417 278 401Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="pronator-teres" role="button" tabindex="0" aria-label="Select pronator teres">
+                <path d="M146 251 157 255 164 272 159 279 149 267Z M334 251 323 255 316 272 321 279 331 267Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="wrist-flexors" role="button" tabindex="0" aria-label="Select wrist flexors">
+                <path d="M143 278 150 273 148 302 142 311 138 301Z M337 278 330 273 332 302 338 311 342 301Z" />
+              </g>
               <path class="body-detail" d="M184 144 Q208 130 237 145 M243 145 Q272 130 296 144 M240 145V193 M220 270Q240 278 260 270 M184 407Q211 417 240 412Q269 417 296 407 M238 207V258 M228 265Q240 269 252 265 M215 431Q240 439 265 431 M214 474Q240 479 266 474 M201 574Q240 586 279 574" />
               <text class="figure-label" x="240" y="631" text-anchor="middle">ANTERIOR / FRONT</text>
             </svg>
@@ -188,14 +203,29 @@
               <g class="muscle-zone" data-muscle="hamstrings" role="button" tabindex="0" aria-label="Select hamstrings">
                 <path d="M188 349 Q210 358 236 350 L229 407 216 427 190 409Z M292 349 Q270 358 244 350 L251 407 264 427 290 409Z" />
               </g>
+              <g class="muscle-zone" data-muscle="biceps-femoris" role="button" tabindex="0" aria-label="Select biceps femoris">
+                <path d="M188 352 207 356 210 401 201 420 190 409Z M292 352 273 356 270 401 279 420 290 409Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="semitendinosus" role="button" tabindex="0" aria-label="Select semitendinosus">
+                <path d="M214 354 233 353 229 407 217 422 211 399Z M266 354 247 353 251 407 263 422 269 399Z" />
+              </g>
               <g class="muscle-zone" data-muscle="calves" role="button" tabindex="0" aria-label="Select calves">
                 <path d="M190 429 215 430 218 469 207 518 193 505 184 469Z M290 429 265 430 262 469 273 518 287 505 296 469Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="gastrocnemius" role="button" tabindex="0" aria-label="Select gastrocnemius">
+                <path d="M187 434 201 430 211 439 207 469 198 483 189 466Z M293 434 279 430 269 439 273 469 282 483 291 466Z" />
               </g>
               <g class="muscle-zone" data-muscle="soleus" role="button" tabindex="0" aria-label="Select soleus">
                 <path d="M194 474 208 483 206 516 198 531 190 511Z M286 474 272 483 274 516 282 531 290 511Z" />
               </g>
               <g class="muscle-zone" data-muscle="achilles-tendon" role="button" tabindex="0" aria-label="Select Achilles tendon">
                 <path d="M204 514 210 516 205 558 202 572 198 566Z M276 514 270 516 275 558 278 572 282 566Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="supraspinatus" role="button" tabindex="0" aria-label="Select supraspinatus">
+                <path d="M191 140 215 137 221 148 209 157 192 153Z M289 140 265 137 259 148 271 157 288 153Z" />
+              </g>
+              <g class="muscle-zone" data-muscle="teres-minor" role="button" tabindex="0" aria-label="Select teres minor">
+                <path d="M183 176 197 184 203 196 196 202 184 192Z M297 176 283 184 277 196 284 202 296 192Z" />
               </g>
               <path class="body-detail" d="M218 117Q240 130 262 117 M240 128V290 M184 142Q202 151 217 169 M296 142Q278 151 263 169 M183 276Q210 290 236 282 M297 276Q270 290 244 282 M181 344Q210 358 240 352Q270 358 299 344 M185 411Q210 421 240 414Q270 421 295 411 M216 431Q240 438 264 431 M219 469Q240 477 261 469 M207 518Q240 530 273 518 M199 573Q240 585 281 573" />
               <text class="figure-label" x="240" y="631" text-anchor="middle">POSTERIOR / BACK</text>
@@ -247,7 +277,8 @@
           </div>
           <div class="activity-focus">
             <div class="section-title"><span class="section-number">A</span><h3>Common muscle demands</h3></div>
-            <p class="activity-hint">Select a group to open its atlas page.</p>
+            <p class="activity-hint">Commonly involved primary and supporting groups. Select any group to view its atlas details. Exact demands vary by technique.</p>
+            <p class="activity-muscle-count" id="activityMuscleCount" aria-live="polite"></p>
             <ul id="activityMuscles" class="activity-muscles" aria-label="Muscles commonly used in this activity"></ul>
           </div>
           <div class="activity-prep">

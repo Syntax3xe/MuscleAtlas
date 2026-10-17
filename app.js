@@ -153,7 +153,47 @@ const muscles = [
   { id: "achilles-tendon", name: "Achilles tendon", region: "lower", view: "back", location: "Tendon connecting the calf muscles to the heel", references: ["nhsFlexibility", "harvardStretching"], stretches: [
     { name: "Gentle straight-knee calf stretch", instructions: "Only if comfortable: face a wall, step one leg back, keep its heel down and knee straight, then lean forward gently. Stop if this causes Achilles pain.", dosage: "15–20 sec, easy range" },
     { name: "Gentle bent-knee calf stretch", instructions: "Only if comfortable: use a supported wall stance, slightly bend the back knee, and keep its heel grounded. Do not stretch into tendon pain.", dosage: "15–20 sec, easy range" }
-  ], causes: ["A sudden increase in running, jumping, or hill work", "Repeated push-off activity or prolonged standing", "A rapid change in footwear or training volume"] }
+  ], causes: ["A sudden increase in running, jumping, or hill work", "Repeated push-off activity or prolonged standing", "A rapid change in footwear or training volume"] },
+  { id: "iliopsoas", name: "Iliopsoas", region: "lower", view: "front", location: "Deep front of the hip, connecting the lower spine to the thigh", references: ["aaosHip", "harvardStretching"], stretches: [
+    { name: "Half-kneeling hip-flexor stretch", instructions: "Kneel on one knee, gently tuck your pelvis, and shift forward slightly while keeping your chest tall.", dosage: "20 sec each side" },
+    { name: "Supported standing hip extension", instructions: "Hold a stable support and move one straight leg a short distance behind you without arching your lower back.", dosage: "8 easy repetitions each side" }
+  ], causes: ["Prolonged sitting followed by vigorous activity", "Repeated sprinting, kicking, or uphill running", "A sudden increase in training volume"] },
+  { id: "rectus-femoris", name: "Rectus femoris", region: "lower", view: "front", location: "Center of the front thigh; part of the quadriceps", references: ["harvardStretching"], stretches: [
+    { name: "Side-lying quadriceps stretch", instructions: "Lie on your side, bend the top knee, and bring your heel gently toward your buttock while keeping your hips steady.", dosage: "20 sec each side" },
+    { name: "Half-kneeling thigh stretch", instructions: "Kneel on one knee with padding, hold a support if needed, and gently bring the heel toward your buttock without arching your back.", dosage: "15–20 sec each side" }
+  ], causes: ["Repeated kicking, sprinting, or climbing", "A sudden increase in running or jumping", "A new or heavier squat routine"] },
+  { id: "vastus-medialis", name: "Vastus medialis", region: "lower", view: "front", location: "Inner portion of the front thigh above the knee", references: ["harvardStretching"], stretches: [
+    { name: "Standing quadriceps stretch", instructions: "Hold a support, bend one knee, and bring the heel gently toward your buttock while keeping your knees close.", dosage: "20–30 sec each side" },
+    { name: "Easy knee bends", instructions: "Stand with support and slowly bend and straighten your knee through a comfortable range.", dosage: "8 slow repetitions each side" }
+  ], causes: ["Repeated stairs, running, or jumping", "A sudden change in squat or lunge training", "Increasing training load faster than recovery"] },
+  { id: "biceps-femoris", name: "Biceps femoris", region: "lower", view: "back", location: "Outer portion of the back thigh; part of the hamstrings", references: ["aaosHip", "harvardStretching"], stretches: [
+    { name: "Supine strap hamstring stretch", instructions: "Lie on your back, loop a towel behind one thigh or foot, and raise your leg until the back of the thigh feels a mild stretch.", dosage: "20 sec each side" },
+    { name: "Seated hip hinge", instructions: "Sit tall with one heel forward and knee slightly soft. Hinge gently from the hips without rounding your back.", dosage: "5 slow repetitions each side" }
+  ], causes: ["Sprinting or sudden acceleration", "A sudden increase in running distance", "High-volume hip-hinge or hamstring training"] },
+  { id: "semitendinosus", name: "Semitendinosus", region: "lower", view: "back", location: "Inner portion of the back thigh; part of the hamstrings", references: ["aaosHip", "harvardStretching"], stretches: [
+    { name: "Supine strap hamstring stretch", instructions: "Lie on your back and raise one leg with a towel behind the thigh. Keep a slight bend in the knee and relax your ankle.", dosage: "20 sec each side" },
+    { name: "Seated hip hinge", instructions: "Sit near the edge of a chair, extend one leg with the heel down, and hinge forward slightly from your hips.", dosage: "5 slow repetitions each side" }
+  ], causes: ["Sudden sprinting or acceleration", "A rapid increase in running or kicking", "Unfamiliar or high-volume hamstring exercises"] },
+  { id: "gastrocnemius", name: "Gastrocnemius", region: "lower", view: "back", location: "Surface muscle of the calf, crossing behind the knee", references: ["nhsFlexibility", "harvardStretching"], stretches: [
+    { name: "Straight-knee wall calf stretch", instructions: "Face a wall, step one leg back, keep that knee straight and heel down, and bend the front knee toward the wall.", dosage: "20 sec each side" },
+    { name: "Easy ankle pumps", instructions: "Sit or lie comfortably and slowly point and flex your foot through a pain-free range.", dosage: "8 repetitions each side" }
+  ], causes: ["A sudden increase in running, jumping, or hills", "Repeated push-off or sprinting", "Long periods standing or a sudden training change"] },
+  { id: "pronator-teres", name: "Pronator teres", region: "upper", view: "front", location: "Diagonal muscle across the upper front forearm", references: ["harvardStretching"], stretches: [
+    { name: "Gentle forearm rotation", instructions: "Keep your elbow bent and close to your side. Slowly turn your palm down and up without forcing the movement.", dosage: "8 repetitions each side" },
+    { name: "Wrist extensor stretch", instructions: "Straighten your arm with palm down and gently bend your wrist so your fingers point toward the floor.", dosage: "15–20 sec each side" }
+  ], causes: ["Repetitive gripping with forearm rotation", "Frequent tool, racquet, or throwing motions", "A rapid increase in lifting or climbing"] },
+  { id: "wrist-flexors", name: "Wrist flexors", region: "upper", view: "front", location: "Palm-side of the forearm", references: ["harvardStretching"], stretches: [
+    { name: "Wrist flexor stretch", instructions: "Straighten one arm with the palm up. Gently draw your fingers down and back with your other hand.", dosage: "20 sec each side" },
+    { name: "Open-and-close hands", instructions: "Relax your forearm and slowly open your hand wide, then gently close it without squeezing.", dosage: "8 repetitions" }
+  ], causes: ["Repeated gripping or wrist bending", "Long periods typing or using hand tools", "A sudden increase in climbing or lifting volume"] },
+  { id: "supraspinatus", name: "Supraspinatus", region: "upper", view: "back", location: "Small rotator-cuff muscle above the back of the shoulder blade", references: ["aaosShoulder"], stretches: [
+    { name: "Gentle across-chest shoulder stretch", instructions: "Bring one arm across your chest and guide it gently with your other arm. Keep your shoulder relaxed and stop if the joint pinches.", dosage: "15–20 sec each side" },
+    { name: "Pendulum circles", instructions: "Support yourself with one hand, lean forward, and let the other arm hang loosely. Make very small circles.", dosage: "8 circles each way" }
+  ], causes: ["Repeated overhead reaching or throwing", "A sudden increase in shoulder training", "Working overhead for long periods"] },
+  { id: "teres-minor", name: "Teres minor", region: "upper", view: "back", location: "Small rotator-cuff muscle at the outer edge of the back shoulder", references: ["aaosShoulder"], stretches: [
+    { name: "Gentle cross-body shoulder stretch", instructions: "Bring one arm across your chest and guide it gently closer while keeping the shoulder down. Do not push through a pinch.", dosage: "15–20 sec each side" },
+    { name: "Easy shoulder rolls", instructions: "Let your arms relax and slowly roll your shoulders up, back, and down within a comfortable range.", dosage: "8 slow repetitions" }
+  ], causes: ["Repeated throwing or external-rotation work", "A rapid increase in overhead activity", "Sustained shoulder tension or unfamiliar reaching"] }
 ];
 
 const activities = [
@@ -163,7 +203,15 @@ const activities = [
     kicker: "01 / REPEATED IMPACT",
     description: "Each stride cycles through landing, single-leg support, and push-off. The work is shared across the lower body and trunk; hills, pace, surface, and stride all change the demands.",
     movement: "Expect repeated calf-and-foot loading, hip and knee control on one leg, and arm swing to help balance.",
-    muscles: ["glutes", "gluteus-medius", "quadriceps", "hamstrings", "calves", "soleus", "tibialis", "hip-flexors", "achilles-tendon"],
+    muscles: [
+      "glutes", "gluteus-medius", "tensor-fasciae-latae", "iliopsoas", "hip-flexors", "sartorius", "adductors",
+      "quadriceps", "rectus-femoris", "vastus-lateralis", "vastus-medialis",
+      "hamstrings", "biceps-femoris", "semitendinosus",
+      "calves", "gastrocnemius", "soleus", "tibialis", "peroneals", "achilles-tendon",
+      "abdominals", "obliques", "lower-back",
+      "sternocleidomastoid", "trapezius", "deltoids", "rear-deltoids", "biceps", "brachialis", "triceps",
+      "brachioradialis", "forearms", "forearm-extensors", "pronator-teres", "wrist-flexors"
+    ],
     notes: [
       "Begin with a few minutes of easy walking or jogging and build pace gradually.",
       "Increase duration, speed, and hills progressively rather than changing everything at once.",
@@ -177,7 +225,15 @@ const activities = [
     kicker: "02 / REPETITIVE PEDALING",
     description: "Pedaling repeats hip and knee motion while the saddle and handlebars shape how long you hold one posture. Indoor cycling, road riding, climbing, and bike fit can shift the load.",
     movement: "Legs provide most of the repeated pedal work; the trunk, shoulders, arms, and hands help support and steer you.",
-    muscles: ["quadriceps", "hamstrings", "glutes", "hip-flexors", "calves", "soleus", "lower-back", "abdominals", "trapezius", "forearms"],
+    muscles: [
+      "glutes", "gluteus-medius", "tensor-fasciae-latae", "iliopsoas", "hip-flexors", "sartorius", "adductors",
+      "quadriceps", "rectus-femoris", "vastus-lateralis", "vastus-medialis",
+      "hamstrings", "biceps-femoris", "semitendinosus",
+      "calves", "gastrocnemius", "soleus", "tibialis", "peroneals", "achilles-tendon",
+      "abdominals", "obliques", "lower-back", "trapezius", "sternocleidomastoid", "deltoids", "triceps", "biceps",
+      "rear-deltoids", "pectorals", "latissimus", "serratus-anterior", "rhomboids", "infraspinatus", "supraspinatus",
+      "teres-major", "teres-minor", "brachialis", "brachioradialis", "forearms", "forearm-extensors", "pronator-teres", "wrist-flexors"
+    ],
     notes: [
       "Start with an easy spin before harder efforts and let cadence or resistance build gradually.",
       "Vary posture and take breaks on longer rides; persistent discomfort can be a reason to review bike fit.",
@@ -191,7 +247,15 @@ const activities = [
     kicker: "03 / REPEATED REACH & ROTATION",
     description: "Stroke choice changes the pattern: freestyle and backstroke repeat overhead reaching and pulling, while breaststroke and butterfly use different leg and trunk actions. Technique and distance matter.",
     movement: "Shoulders and upper back guide the pull; the trunk helps rotate and transfer force, and legs contribute kick and body position.",
-    muscles: ["latissimus", "pectorals", "deltoids", "rear-deltoids", "triceps", "biceps", "serratus-anterior", "infraspinatus", "abdominals", "obliques", "glutes", "calves"],
+    muscles: [
+      "pectorals", "deltoids", "rear-deltoids", "triceps", "biceps", "brachialis", "brachioradialis",
+      "forearms", "forearm-extensors", "pronator-teres", "wrist-flexors",
+      "latissimus", "serratus-anterior", "trapezius", "rhomboids", "infraspinatus", "supraspinatus", "teres-major", "teres-minor",
+      "sternocleidomastoid", "abdominals", "obliques", "lower-back",
+      "glutes", "gluteus-medius", "tensor-fasciae-latae", "hip-flexors", "iliopsoas", "sartorius", "adductors",
+      "quadriceps", "rectus-femoris", "vastus-lateralis", "vastus-medialis", "hamstrings", "biceps-femoris", "semitendinosus",
+      "calves", "gastrocnemius", "soleus", "tibialis", "peroneals", "achilles-tendon"
+    ],
     notes: [
       "Ease into the session with relaxed swimming and controlled shoulder movement before increasing effort.",
       "Build distance or intensity gradually, especially when returning to the pool or adding a new stroke.",
@@ -205,7 +269,16 @@ const activities = [
     kicker: "04 / LOAD & CONTROL",
     description: "Lifting is not one movement: squats, hinges, presses, pulls, and carries place different demands on different muscle groups. Choose the atlas areas that match the exercises you do.",
     movement: "Leg and hip muscles, trunk bracing, back, chest, shoulders, and arms contribute in different combinations depending on the lift and technique.",
-    muscles: ["glutes", "quadriceps", "hamstrings", "adductors", "lower-back", "abdominals", "latissimus", "pectorals", "deltoids", "triceps", "biceps", "forearms"],
+    muscles: [
+      "sternocleidomastoid", "trapezius", "deltoids", "rear-deltoids", "pectorals", "latissimus", "serratus-anterior",
+      "rhomboids", "infraspinatus", "supraspinatus", "teres-major", "teres-minor",
+      "biceps", "brachialis", "triceps", "brachioradialis", "forearms", "forearm-extensors", "pronator-teres", "wrist-flexors",
+      "abdominals", "obliques", "lower-back",
+      "glutes", "gluteus-medius", "tensor-fasciae-latae", "iliopsoas", "hip-flexors", "sartorius", "adductors",
+      "quadriceps", "rectus-femoris", "vastus-lateralis", "vastus-medialis",
+      "hamstrings", "biceps-femoris", "semitendinosus",
+      "calves", "gastrocnemius", "soleus", "tibialis", "peroneals"
+    ],
     notes: [
       "Warm up with easy movement and lighter, controlled versions of the exercises you plan to do.",
       "Use a load and range you can control, and increase training demands progressively.",
@@ -324,6 +397,7 @@ function makeActivityMuscleButton(id) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "activity-muscle";
+  button.dataset.muscle = id;
   button.textContent = muscle.name;
   button.addEventListener("click", () => {
     searchInput.value = "";
@@ -351,6 +425,7 @@ function renderActivity(id) {
   document.querySelector("#activityTitle").textContent = activity.title;
   document.querySelector("#activityDescription").textContent = activity.description;
   document.querySelector("#movementNote").textContent = activity.movement;
+  document.querySelector("#activityMuscleCount").textContent = `${activity.muscles.length} mapped atlas entries`;
   document.querySelector("#activityMuscles").replaceChildren(...activity.muscles.map(makeActivityMuscleButton));
   document.querySelector("#activityNotes").replaceChildren(...activity.notes.map(makeListItem));
   document.querySelector("#activitySources").replaceChildren(...activity.references.map(makeSourceListItem));
@@ -387,6 +462,7 @@ function renderList() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "muscle-option";
+    button.dataset.muscle = muscle.id;
     button.classList.toggle("is-selected", muscle.id === selectedId);
     button.setAttribute("aria-current", muscle.id === selectedId ? "true" : "false");
     button.innerHTML = `<span class="option-name">${muscle.name}</span><span class="option-arrow" aria-hidden="true">↗</span>`;
