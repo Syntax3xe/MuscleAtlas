@@ -450,6 +450,15 @@ function enableTabArrowKeys(selector) {
   });
 }
 
+function setTheme(isDark) {
+  const theme = isDark ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector("#themeToggle").setAttribute("aria-pressed", String(isDark));
+  document.querySelector("#themeToggle").setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+  document.querySelector("#themeLabel").textContent = isDark ? "Light mode" : "Dark mode";
+  document.querySelector('meta[name="theme-color"]').content = isDark ? "#171a18" : "#f5f3ed";
+}
+
 function renderList() {
   const query = searchInput.value.trim().toLowerCase();
   const region = regionFilter.value;
@@ -495,6 +504,15 @@ document.querySelectorAll(".activity-tab").forEach((tab) => {
 });
 enableTabArrowKeys(".explorer-tabs [role='tab']");
 enableTabArrowKeys(".activity-tab");
+
+const themeToggle = document.querySelector("#themeToggle");
+const savedTheme = localStorage.getItem("muscle-atlas-theme");
+setTheme(savedTheme === "dark");
+themeToggle.addEventListener("click", () => {
+  const isDark = document.documentElement.dataset.theme !== "dark";
+  setTheme(isDark);
+  localStorage.setItem("muscle-atlas-theme", isDark ? "dark" : "light");
+});
 
 searchInput.addEventListener("input", renderList);
 regionFilter.addEventListener("change", renderList);
