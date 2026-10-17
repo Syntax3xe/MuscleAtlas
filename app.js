@@ -511,18 +511,30 @@ function updateMapZoom() {
   zoomReset.disabled = mapZoom === 1;
 }
 
-zoomOut.addEventListener("click", () => {
-  mapZoom = Math.max(0.75, Math.round((mapZoom - 0.25) * 100) / 100);
+function setMapZoom(zoom) {
+  mapZoom = Math.min(2.5, Math.max(0.75, Math.round(zoom * 1000) / 1000));
   updateMapZoom();
+}
+
+zoomOut.addEventListener("click", () => {
+  setMapZoom(mapZoom - 0.25);
 });
 zoomIn.addEventListener("click", () => {
-  mapZoom = Math.min(2.5, Math.round((mapZoom + 0.25) * 100) / 100);
-  updateMapZoom();
+  setMapZoom(mapZoom + 0.25);
 });
 zoomReset.addEventListener("click", () => {
-  mapZoom = 1;
-  updateMapZoom();
+  setMapZoom(1);
 });
+figureStage.addEventListener("wheel", (event) => {
+  const delta = event.deltaY * (event.deltaMode === WheelEvent.DOM_DELTA_LINE
+    ? 16
+    : event.deltaMode === WheelEvent.DOM_DELTA_PAGE ? figureStage.clientHeight : 1);
+  const nextZoom = Math.min(2.5, Math.max(0.75, mapZoom * Math.pow(1.0015, -delta)));
+  if (nextZoom !== mapZoom) {
+    event.preventDefault();
+    setMapZoom(nextZoom);
+  }
+}, { passive: false });
 updateMapZoom();
 
 document.querySelectorAll(".explorer-tabs [role='tab']").forEach((tab) => {
