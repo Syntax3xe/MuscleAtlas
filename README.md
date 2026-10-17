@@ -1,6 +1,6 @@
 # Muscle Atlas
 
-A responsive, browser-only movement reference. Explore major muscle groups on the front or back anatomy map, or switch to activity guides for running, biking, swimming, and lifting. Muscle pages include example stretches with step-by-step cues, dosage suggestions, source guides, and common sources of discomfort.
+A responsive, browser-only movement reference. Explore major muscle groups on the front or back anatomy map, zoom in on the diagram, or switch to activity guides for running, biking, swimming, and lifting. Muscle pages include example stretches with step-by-step cues, dosage suggestions, source guides, and common sources of discomfort.
 
 ## Run it
 

@@ -31,7 +31,7 @@
           <p class="eyebrow">ANATOMY, MADE INTERACTIVE</p>
           <h1 id="page-title">Know what’s <em>moving you.</em></h1>
         </div>
-        <p class="intro-copy">Explore 42 muscle groups and the Achilles tendon on an enlarged front-and-back body map, or see which muscles are commonly involved in different activities.</p>
+        <p class="intro-copy">Explore different muscle groups on an enlarged front-and-back body map, or see which muscles are commonly involved in different activities.</p>
       </section>
 
       <div class="explorer-tabs" id="explorerTabs" role="tablist" aria-label="Explore by">
@@ -77,6 +77,12 @@
             </div>
           </div>
           <div class="map-legend"><span><i class="legend-swatch"></i> Select a highlighted area</span><span class="map-index">FIG. 01—02</span></div>
+          <div class="map-zoom" role="group" aria-label="Diagram zoom controls">
+            <button id="zoomOut" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+            <output id="zoomLevel" aria-live="polite">100%</output>
+            <button id="zoomIn" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+            <button id="zoomReset" type="button" aria-label="Reset diagram zoom">Reset</button>
+          </div>
           <div class="figure-stage">
             <svg class="body-map body-map--front is-active" id="frontMap" viewBox="0 0 480 640" role="img" aria-labelledby="frontTitle frontDesc">
               <title id="frontTitle">Front view of major muscle groups</title>

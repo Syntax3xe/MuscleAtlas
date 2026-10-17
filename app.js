@@ -496,6 +496,35 @@ function setView(view) {
   });
 }
 
+let mapZoom = 1;
+const figureStage = document.querySelector(".figure-stage");
+const zoomLevel = document.querySelector("#zoomLevel");
+const zoomOut = document.querySelector("#zoomOut");
+const zoomIn = document.querySelector("#zoomIn");
+const zoomReset = document.querySelector("#zoomReset");
+
+function updateMapZoom() {
+  figureStage.style.setProperty("--map-zoom", mapZoom);
+  zoomLevel.value = `${Math.round(mapZoom * 100)}%`;
+  zoomOut.disabled = mapZoom <= 0.75;
+  zoomIn.disabled = mapZoom >= 2.5;
+  zoomReset.disabled = mapZoom === 1;
+}
+
+zoomOut.addEventListener("click", () => {
+  mapZoom = Math.max(0.75, Math.round((mapZoom - 0.25) * 100) / 100);
+  updateMapZoom();
+});
+zoomIn.addEventListener("click", () => {
+  mapZoom = Math.min(2.5, Math.round((mapZoom + 0.25) * 100) / 100);
+  updateMapZoom();
+});
+zoomReset.addEventListener("click", () => {
+  mapZoom = 1;
+  updateMapZoom();
+});
+updateMapZoom();
+
 document.querySelectorAll(".explorer-tabs [role='tab']").forEach((tab) => {
   tab.addEventListener("click", () => setExplorerMode(tab));
 });
