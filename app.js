@@ -313,6 +313,7 @@ function selectMuscle(id) {
     zone.classList.toggle("is-selected", zone.dataset.muscle === id);
     zone.setAttribute("aria-pressed", String(zone.dataset.muscle === id));
   });
+  document.dispatchEvent(new CustomEvent("atlas:select", { detail: { id } }));
 }
 
 function makeListItem(text) {
@@ -509,6 +510,7 @@ function updateMapZoom() {
   zoomOut.disabled = mapZoom <= 0.75;
   zoomIn.disabled = mapZoom >= 2.5;
   zoomReset.disabled = mapZoom === 1;
+  document.dispatchEvent(new CustomEvent("atlas:zoom", { detail: { zoom: mapZoom } }));
 }
 
 function setMapZoom(zoom) {

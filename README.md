@@ -6,6 +6,8 @@ A responsive, browser-only movement reference. Explore major muscle groups on th
 
 Open `index.html` in a modern browser. The project uses plain HTML, CSS, and JavaScript; it has no build step, package install, external font, API, or server requirement.
 
+The muscle map is a 3D model (`anatomy3d.js`) rendered with three.js, which is loaded from the jsDelivr CDN. Drag to rotate, scroll or use the zoom controls to zoom, and click a muscle to open its details. If WebGL or the CDN is unavailable, the page falls back to the original 2D front and back SVG diagrams.
+
 ## Scope and safety
 
 The clickable front and back diagrams cover 42 catalogued muscle groups and the Achilles tendon; they are stylized guides, not a complete map of every anatomical muscle and not a diagnostic tool. Activity guides include common primary and supporting muscle groups; actual demands vary with technique, equipment, terrain, intensity, stroke, and training history. Achilles stretches are optional gentle calf stretches, not a treatment for tendon pain or injury; do not stretch into pain and seek clinical advice for persistent or sudden Achilles symptoms. Other stretch suggestions are general examples informed by NHS, AAOS, and Harvard Health guidance, not a personalized treatment plan. Warm up first, move gently, and stop if pain increases. Follow advice from your clinician. Seek urgent care for chest pain, sudden weakness, major swelling, or pain after serious injury.
